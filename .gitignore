@@ -1,0 +1,37 @@
+# VS Code specific
+.vscode/
+
+# Classpath and target directories
+.classpath
+.project
+
+# Compiled class files
+target/
+**/target/*
+
+# IDE generated files (IntelliJ IDEA specific)
+**.iml
+*.ipr
+*.iws
+
+# Logs and temporary files
+*.log
+**/logs/*
+
+# OS specific temporary files
+# Adjust based on your OS
+*.swp
+*.DS_Store
+
+# IDE settings (uncomment if needed)
+# netbeans/
+# idea/
+
+# Maven related files (uncomment if you use Maven)
+pom.xml.lock
+**/target/*.txt
+
+# Gradle related files (uncomment if you use Gradle)
+**/build/
+
+**/.class
