@@ -35,3 +35,4 @@ pom.xml.lock
 **/build/
 
 **/.class
+*.class
