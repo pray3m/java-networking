@@ -10,8 +10,7 @@ public class URLDemo {
 
                 // Creating a URL with string representation
                 URL url1 = new URL(
-                                "https://www.google.co.in/?gfe_rd=cr&ei=ptYq"
-                                                + "WK26I4fT8gfth6CACg#q=geeks+for+geeks+java");
+                                "https://prem@www.premgautam.com/about?job=programming#butwal");
 
                 // Creating a URL with a protocol,hostname,and path
                 URL url2 = new URL("http", "www.geeksforgeeks.org",
@@ -32,25 +31,28 @@ public class URLDemo {
                 System.out.println("Different components of the URL3-");
 
                 // protocol for the URL
-                System.out.println("Protocol:- " + url3.getProtocol());
+                System.out.println("Protocol:- " + url1.getProtocol());
 
                 // hostname of the url
-                System.out.println("Hostname:- " + url3.getHost());
+                System.out.println("Hostname:- " + url1.getHost());
 
                 //  default port
-                System.out.println("Default port:- " + url3.getDefaultPort());
+                System.out.println("Default port:- " + url1.getDefaultPort());
 
                 // query part of URL
-                System.out.println("Query:- " + url3.getQuery());
+                System.out.println("Query:- " + url1.getQuery());
 
                 // path of URL
-                System.out.println("Path:- " + url3.getPath());
+                System.out.println("Path:- " + url1.getPath());
 
                 // file name
-                System.out.println("File:- " + url3.getFile());
+                System.out.println("File:- " + url1.getFile());
 
                 //  reference
-                System.out.println("Reference:- " + url3.getRef());
+                System.out.println("Reference:- " + url1.getRef());
+
+                // user info
+                System.out.println("User info: " + url1.getUserInfo());
 
         }
 }
