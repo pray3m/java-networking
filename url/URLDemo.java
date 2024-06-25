@@ -36,7 +36,7 @@ public class URLDemo {
                 // hostname of the url
                 System.out.println("Hostname:- " + url1.getHost());
 
-                //  default port
+                // default port
                 System.out.println("Default port:- " + url1.getDefaultPort());
 
                 // query part of URL
@@ -48,7 +48,7 @@ public class URLDemo {
                 // file name
                 System.out.println("File:- " + url1.getFile());
 
-                //  reference
+                // reference
                 System.out.println("Reference:- " + url1.getRef());
 
                 // user info
