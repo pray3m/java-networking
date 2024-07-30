@@ -16,6 +16,8 @@ public class ClientSocketDemo {
         noDelay = socket.getTcpNoDelay();
         System.out.println("Is TCP No Delay  (after setting true) ? " + noDelay);
 
+        socket.setSoLinger(noDelay, 0);
+
         System.out.println("Is output shutdown ? " + socket.isOutputShutdown());
 
         // PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
@@ -26,7 +28,18 @@ public class ClientSocketDemo {
         // String messageFromServer = in.readLine();
         // System.out.println("Server says: " + messageFromServer);
 
-        // socket.setSoTimeout(5000);
-        // socket.close();
+        socket.setReuseAddress(noDelay);
+
+        socket.setOOBInline(noDelay);
+        socket.setTrafficClass(0);
+
+        socket.setSoTimeout(2000);
+        System.out.println("Closing socket in 2 seconds...");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 }
