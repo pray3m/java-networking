@@ -9,22 +9,27 @@ import java.net.Socket;
 
 public class MultithreadingServer {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        ServerSocket server = null;
 
         try {
 
-            ServerSocket server = new ServerSocket(8080);
+            server = new ServerSocket(8080);
             System.out.println("Waiting for client");
 
-            //  Client filename : ClientThread.java
+            // Client filename : ClientThread.java
 
             Socket clientSocket = server.accept();
+
+            server.setReuseAddress(false);
 
             Thread thread = new ClientHandler(clientSocket);
             thread.start();
 
         } catch (Exception ex) {
             System.out.println("Error" + ex.getMessage());
+        } finally {
+            server.close();
         }
 
     }
