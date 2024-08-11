@@ -2,6 +2,10 @@
 
 Network programming, also known as socket programming, refers to writing programs that execute across multiple devices (computers), in which the devices are all connected to each other using a network.
 
+## URL
+![Structure of URL](https://pbs.twimg.com/media/GUru-iBXoAAUaiD?format=jpg&name=medium)
+
+
 ## **Basics**:
 
 ### **1. IP Address**:
