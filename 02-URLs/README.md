@@ -144,6 +144,19 @@ URI uri = new URI("http://www.example.com/index.html");
 - **`getRaw<url-part>()`** : Returns the corresponding info of the url part
 
 
+### Resolving Relative URIs
+
+- `public URI resolve(URI uri)`: Resolves the given URI against this URI.
+
+```java
+URI base = new URI("http://www.example.com/index.html");
+URI relative = new URI("/about.html");
+
+URI resolved = base.resolve(relative);
+
+System.out.println(resolved);
+```
+
 ## The URLEncoder and URLDecoder Classes
 
 > @returns `String` object
@@ -181,6 +194,61 @@ System.out.println(decodedURL);
 - *The `decode()` method reverses this process, converting '+' back to spaces and *'%XX' hex values back to their original characters.*
  - *These classes are particularly useful when working with query parameters in URLs or when handling user input that will be part of a URL.*
 
+## Proxies
+
+A proxy server is an intermediary server that sits between the client and the server. It intercepts requests from clients and forwards them to the server, then forwards the server's response back to the client. Proxies are commonly used to filter requests, cache data, or provide anonymity for clients.
+
+![Working of Proxy Server](https://www.paloaltonetworks.com/content/dam/pan/en_US/images/cyberpedia/2023-proxy-1.png?imwidth%3D1366)
 
 
+### System Properties 
+
+```java
+System.setProperty("http.proxyHost", "proxy.example.com");
+System.setProperty("http.proxyPort", "8080");
+
+```
+
+### The Proxy Class
+
+The `Proxy` class represents a proxy setting, consisting of a proxy type and an address.
+
+**`public Proxy(Proxy.Type type, SocketAddress sa)
+`**
+
+Types :
+- `Proxy.Type.DIRECT` : Represents a direct connection, or the absence of a proxy
+
+- `Proxy.Type.HTTP`: Represents an HTTP proxy
+- `Proxy.Type.SOCKS`: Represents a SOCKS (V4 or V5) proxy
+
+```java
+SocketAddress address = new InetSocketAddress("proxy.example.com", 8080);
+Proxy proxy = new Proxy(Proxy.Type.HTTP, address);
+```
+
+### The ProxySelector Class
+`ProxySelector` is an abstract class that determines which proxy (if any) to use for a given network connection.
+
+#### Key Points:
+
+- Allows dynamic proxy selection based on the URI of the connection
+- Can be used to implement custom proxy selection logic
+- Default selector can be set system-wide
+
+#### Main Methods:
+
+- `static ProxySelector getDefault()`: Gets the current default selector
+- `static void setDefault(ProxySelector ps)`: Sets the default selector
+- `abstract List<Proxy> select(URI uri)`: Selects proxies for a given URI
+- `abstract void connectFailed(URI uri, SocketAddress sa, IOException ioe)`: Called when a connection fails
+
+
+## Communicating with server side programs through GET
+
+## Accessing Password Protected Sites
+
+### The authenticator class
+### The Password authentication class
+### Jpassword field class
 
