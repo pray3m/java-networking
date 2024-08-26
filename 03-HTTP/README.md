@@ -254,6 +254,11 @@ Set-Cookie: sessionId=abc123; Expires=Wed, 27 Sep 2024 12:00:00 GMT; Path=/; Dom
   CookieHandler.setDefault(cookieManager);
     ```
 
+    Three policies are defined : 
+    - `CookiePolicy.ACCEPT_ALL`
+    - `cookiePolicy.ACCEPT_NONE`
+    - `cookiePolicy.ACCEPT_ORIGINAL_SERVER` : only first party cookies
+
 ### Custom Cookie Manager
 
 A `Custom Cookie Manager` allows developers to implement their own cookie management logic by extending `CookieManager` or `CookieHandler`.
@@ -291,6 +296,10 @@ A `Custom Cookie Manager` allows developers to implement their own cookie manage
 - `removeAll()`: Clears all cookies from the store.
 
 **Default Implementation**: The default CookieStore implementation stores cookies in memory.
+
+```java
+CookieStore store = cookieManager.getCookieStore();
+```
 
 **Custom Implementation**: You can implement your own CookieStore to store cookies in a database, file, or any other storage mechanism.
 
@@ -334,3 +343,33 @@ cookie.setMaxAge(3600); // 1 hour
 ```
 
 This example creates a cookie with a 1-hour lifespan, valid for the "example.com" domain.
+
+
+## Program : 
+
+```java
+CookieManager cookieManager = new CookieManager();
+CookieStore store = cookieManager.getCookieStore();
+
+// creating cookie and uri
+HttpCookie c1 = new HttpCookie("user1", "1");
+HttpCookie c2 = new HttpCookie("user2", "2");
+
+URI uri1 = URI.create("htttp://spm.com.np");
+URI uri2 = URI.create("htttp://spm.com.np");
+
+
+// add
+store.add(uri1, c1);
+store.add(uri2, c2);
+
+
+List<HttpCookie> cookiesList = store.getCookies();
+
+// remove
+store.remove(uri1,c1);
+
+//remove all
+store.removeAll();
+
+```
