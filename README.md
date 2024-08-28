@@ -27,6 +27,7 @@ Documentation, Examples and Resources
 [![MIT License][license-shield]][license-url] -->
 
 <!-- Badges -->
+<div align="center">
 <a href="https://github.com/pray3m/java-networking/stargazers">
   <img src="https://img.shields.io/github/stars/pray3m/java-networking.svg?style=for-the-badge" alt="Stargazers" />
 </a>
@@ -44,12 +45,13 @@ Documentation, Examples and Resources
 </a>
 
 
-Welcome to the repository for Networking Programming <br>| with Java |<br>| BCA , CSIT , BIT | <br/>
+<br> </br>
+Welcome to the repository for Networking Programming <br>| with Java |<br>| BCA , CSIT , BIT | <br> <br>
 
  <a href="https://github.com/pray3m/java-networking/" title="Star this repository">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Star" />
   </a>
-
+<br> </br>
 </div>
 
 # Table of Contents
