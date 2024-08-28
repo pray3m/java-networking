@@ -96,7 +96,7 @@ Java Networking content is open-sourced [licensed as GPLv3](https://github.com/p
 
 If you find this repository useful, please give it a star! It helps others find the project and shows your support.
 
-[Star this repository](https://github.com/pray3m/java-networking)
+❕ [Star the Repository](https://github.com/pray3m/java-networking/stargazers)
 
 ## 🤝 Contribute
 
