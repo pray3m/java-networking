@@ -21,13 +21,34 @@ Documentation, Examples and Resources
 
 </strong></p>
 
-[![Stargazers][stars-shield]][stars-url] [![Forks][forks-shield]][forks-url]
+<!-- [![Stargazers][stars-shield]][stars-url] [![Forks][forks-shield]][forks-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![MIT License][license-shield]][license-url] -->
+
+<!-- Badges -->
+<a href="https://github.com/pray3m/java-networking/stargazers">
+  <img src="https://img.shields.io/github/stars/pray3m/java-networking.svg?style=for-the-badge" alt="Stargazers" />
+</a>
+<a href="https://github.com/pray3m/java-networking/network/members">
+  <img src="https://img.shields.io/github/forks/pray3m/java-networking.svg?style=for-the-badge" alt="Forks" />
+</a>
+<a href="https://github.com/pray3m/java-networking/graphs/contributors">
+  <img src="https://img.shields.io/github/contributors/pray3m/java-networking.svg?style=for-the-badge" alt="Contributors" />
+</a>
+<a href="https://github.com/pray3m/java-networking/issues">
+  <img src="https://img.shields.io/github/issues/pray3m/java-networking.svg?style=for-the-badge" alt="Issues" />
+</a>
+<a href="https://github.com/pray3m/java-networking/blob/main/LICENSE.txt">
+  <img src="https://img.shields.io/github/license/pray3m/java-networking.svg?style=for-the-badge" alt="MIT License" />
+</a>
 
 
-Welcome to the repository for Networking Programming <br>| with Java |<br>| BCA , CSIT , BIT |
+Welcome to the repository for Networking Programming <br>| with Java |<br>| BCA , CSIT , BIT | <br/>
+
+ <a href="https://github.com/pray3m/java-networking/" title="Star this repository">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Star" />
+  </a>
 
 </div>
 
@@ -96,7 +117,7 @@ Java Networking content is open-sourced [licensed as GPLv3](https://github.com/p
 
 If you find this repository useful, please give it a star! It helps others find the project and shows your support.
 
-❕ [Star the Repository](https://github.com/pray3m/java-networking/stargazers)
+[Star the Repository](https://github.com/pray3m/java-networking)
 
 ## 🤝 Contribute
 
