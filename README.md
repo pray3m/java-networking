@@ -1,290 +1,114 @@
-# Network Programming
+[contributors-shield]: https://img.shields.io/github/contributors/pray3m/java-networking.svg?style=for-the-badge
+[contributors-url]: https://github.com/pray3m/java-networking/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/pray3m/java-networking.svg?style=for-the-badge
+[forks-url]: https://github.com/pray3m/java-networking/network/members
+[stars-shield]: https://img.shields.io/github/stars/pray3m/java-networking.svg?style=for-the-badge
+[stars-url]: https://github.com/pray3m/java-networking/stargazers
+[issues-shield]: https://img.shields.io/github/issues/pray3m/java-networking.svg?style=for-the-badge
+[issues-url]: https://github.com/pray3m/java-networking/issues
+[license-shield]: https://img.shields.io/github/license/pray3m/java-networking.svg?style=for-the-badge
+[license-url]: https://github.com/pray3m/java-networking/blob/main/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
-Network programming, also known as socket programming, refers to writing programs that execute across multiple devices (computers), in which the devices are all connected to each other using a network.
+_Work in Progress_
 
-## URL
-![Structure of URL](https://pbs.twimg.com/media/GUru-iBXoAAUaiD?format=jpg&name=medium)
+<div align="center">
+<h1> Network Programming : Comprehensive Guide <br>| with Java |</h1>
 
+<p align="center"><strong>
 
-## **Basics**:
+Documentation, Examples and Resources
 
-### **1. IP Address**:
-An IP address is a unique set of numbers (such as `192.168.1.1`) that identifies a computer or a device on a network.
+</strong></p>
 
-### **2. Ports**:
-Ports can be thought of as endpoints for communication on a computer. A computer has over 65,000 ports, and a specific program can listen on a specific port for incoming connections or data.
+[![Stargazers][stars-shield]][stars-url] [![Forks][forks-shield]][forks-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-### **3. Sockets**:
-A socket provides an endpoint for sending or receiving data across a computer network. In essence, it is a combination of IP address and port, providing all the details needed to send or receive data.
 
-## **Socket Programming**:
+Welcome to the repository for Networking Programming <br>| with Java |<br>| BCA , CSIT , BIT |
 
-In many languages, network programming is achieved using sockets.
+</div>
 
-### **Server Socket**:
-- Waits for requests from clients.
-- Binds to a specific port on which it will listen for client requests.
+# Table of Contents
 
-### **Client Socket**:
-- Used to send and receive data to/from a server.
-- Needs to know the server's IP address and port number.
+## [01-InternetAddress](./01-InternetAddress/README.md)
+  - [IP (Internet Protocol) Address](./01-InternetAddress/README.md#ip-internet-protocol-address)
+  - [Domain Names](./01-InternetAddress/README.md#domain-names)
+  - [The InetAddress Class](./01-InternetAddress/README.md#the-inetaddress-class)
+    - [Creating new InetAddress objects](./01-InternetAddress/README.md#creating-new-inetaddress-objects)
+    - [Static Methods](./01-InternetAddress/README.md#static-methods)
+    - [Getter Methods](./01-InternetAddress/README.md#getter-methods)
+    - [Address Types](./01-InternetAddress/README.md#address-types)
+    - [Testing Reachability](./01-InternetAddress/README.md#testing-reachability)
+    - [Object Methods](./01-InternetAddress/README.md#object-methods)
+  - [Inet4Address and Inet6Address](./01-InternetAddress/README.md#inet4address-and-inet6address)
+- [Network Interface](./01-InternetAddress/README.md#network-interface)
+  - [The NetworkInterface Class](./01-InternetAddress/README.md#the-networkinterface-class)
+    - [Creating New NetworkInterface Objects](./01-InternetAddress/README.md#creating-new-networkinterface-objects)
+    - [Static Factory Methods](./01-InternetAddress/README.md#static-factory-methods)
+    - [Getter Methods](./01-InternetAddress/README.md#getter-methods)
 
-## **Java Example**:
-Java provides a comprehensive API for network programming in the `java.net` package.
 
-```java
-// Simple Server Example
-import java.net.*;
-import java.io.*;
+<summary>
+<a href="#congratulations">Congratulations</a>
+</summary>
 
-public class SimpleServer {
-    public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(8080); // Server will listen on port 8080
-        System.out.println("Waiting for client...");
-        Socket clientSocket = serverSocket.accept(); // This will wait until a client connects
-        PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-        out.println("Hello, client!");
-        serverSocket.close();
-    }
-}
-```
 
-```
-// Simple Client Example
-import java.net.*;
-import java.io.*;
+<a href="#thank-you">Thank you </a>
 
-public class SimpleClient {
-    public static void main(String[] args) throws IOException {
-        Socket socket = new Socket("localhost", 8080); // Connect to server on localhost, port 8080
-        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        String messageFromServer = in.readLine();
-        System.out.println("Server says: " + messageFromServer);
-        socket.close();
-    }
-}
+<p align="right">(<a href="#table-of-contents">back to top</a>) ⬆️</p>
 
-```
+# Congratulations
 
+🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊 Completed all The Course! 🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊
 
-# Socket Programming using TCP
+<!-- ## Where do I go now? -->
 
-Socket programming is a method of communication between two computers using a network protocol, commonly TCP/IP. TCP (Transmission Control Protocol) is a reliable, connection-oriented protocol commonly used in socket programming.
+<!-- ### Learning More -->
 
-## **TCP Sockets**:
-TCP ensures that all of the data arrives and is in the right order. It is typically used where data delivery is more critical than timing.
+<!-- - [Top 10 learning resources](https://patrickalphac.medium.com/top-10-smart-contract-solidity-developer-learning-resources-cb9d60dd1146)
+- [Patrick Collins](https://www.youtube.com/channel/UCn-3f8tw_E1jZvhuHatROwA)
+- [CryptoZombies](https://cryptozombies.io/)
+- [Alchemy University](https://www.alchemy.com/dapps/alchemy-university)
+- [Speed Run Ethereum](https://speedrunethereum.com/)
+- [Ethereum.org](https://ethereum.org/en/) -->
+  
 
-### **Server Steps**:
-1. Create a Server Socket.
-2. Bind to a specific port.
-3. Listen for client connections.
-4. Accept an incoming client connection.
-5. Send and receive data.
-6. Close the connection.
 
-### **Client Steps**:
-1. Create a Client Socket.
-2. Connect to the server's IP address and port.
-3. Send and receive data.
-4. Close the connection.
+# Thank you <3 !
 
-## **Java TCP Socket Programming Example**:
+Thanks to everyone who is taking, participating in, and working on this repo !. 
 
-### **Server**:
+<a href="https://github.com/pray3m/java-networking/graphs/contributors">
 
-```java
-import java.io.*;
-import java.net.*;
+💚 Contributors
+<!-- <img src="https://contrib.rocks/image?repo=pray3m/java-networking" /> -->
 
-public class TCPServer {
-    public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(8080);
-        System.out.println("Server is listening on port 8080...");
+</a>
 
-        Socket clientSocket = serverSocket.accept();
-        System.out.println("Connected to client...");
+## License
 
-        DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
-        out.writeUTF("Hello from the TCP Server!");
+Java Networking content is open-sourced [licensed as GPLv3](https://github.com/pray3m/java-networking/blob/main/LICENSE).
 
-        clientSocket.close();
-        serverSocket.close();
-    }
-}
-```
+## ⭐ Star the Repository
 
+If you find this repository useful, please give it a star! It helps others find the project and shows your support.
 
-# Socket Programming using UDP
+[Star this repository](https://github.com/pray3m/java-networking)
 
-Socket programming enables communication between two machines using the User Datagram Protocol (UDP) or Transmission Control Protocol (TCP). UDP is a connectionless, unreliable protocol, meaning it does not guarantee message delivery or the order of messages. It's often faster than TCP because of the absence of error-checking and the lack of a connection setup and teardown process.
+## 🤝 Contribute
 
-## **UDP Sockets**:
-UDP sockets are typically used in situations where low latency is more crucial than reliability, such as streaming audio or video.
+We welcome contributions to this repository. If you want to contribute, please follow these steps:
 
-### **Server Steps**:
-1. Create a Datagram Socket.
-2. Bind to a specific port.
-3. Receive a Datagram Packet.
-4. Send a Datagram Packet (if necessary).
-5. Close the Datagram Socket.
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Create a new Pull Request
 
-### **Client Steps**:
-1. Create a Datagram Socket.
-2. Send a Datagram Packet to the server.
-3. Receive a Datagram Packet from the server (if expected).
-4. Close the Datagram Socket.
+Your contributions will help improve this project for everyone!
 
-## **Java UDP Socket Programming Example**:
 
-### **Server**:
-
-```java
-import java.io.*;
-import java.net.*;
-
-public class UDPServer {
-    public static void main(String[] args) throws IOException {
-        DatagramSocket socket = new DatagramSocket(8080);
-        System.out.println("Server is listening on port 8080...");
-
-        byte[] buffer = new byte[1024];
-        DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
-        socket.receive(packet);
-
-        String message = new String(packet.getData(), 0, packet.getLength());
-        System.out.println("Received from client: " + message);
-
-        socket.close();
-    }
-}
-```
-
-
-```
-
-import java.io.*;
-import java.net.*;
-
-public class UDPClient {
-    public static void main(String[] args) throws IOException {
-        DatagramSocket socket = new DatagramSocket();
-
-        byte[] buffer = "Hello from the UDP Client!".getBytes();
-        InetAddress address = InetAddress.getByName("localhost");
-        DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 8080);
-
-        socket.send(packet);
-        System.out.println("Message sent to the server...");
-
-        socket.close();
-    }
-}
-
-
-```
-
-# Java URL Handling Example
-
-This example demonstrates various aspects of handling URLs in Java.
-
-```java
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URI;
-
-public class URLHandlingExample {
-
-    public static void main(String[] args) throws Exception {
-
-        // **1. Creating a URL**
-        URL myURL = new URL("https://www.google.com/search?q=testing+url&newwindow=1&sca_esv=567971749&sxsrf=AM9HkKmpZKyEP98GXeS1S18YgC_JMI9E2A%3A1695548636186&source=hp&ei=3AQQZcX0CNeghwPfhYvIAQ&iflsig=AO6bgOgAAAAAZRAS7KxLkN7iYsQ483BUGdC0axKdKnSm&ved=0ahUKEwjF0qDx-sKBAxVX0GEKHd_CAhkQ4dUDCAk&uact=5&oq=testing+url&gs_lp=Egdnd3Mtd2l6Igt0ZXN0aW5nIHVybDIIEAAYywEYgAQyCBAAGMsBGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjGLlC_AVjhK3AHeACQAQCYAbABoAHBEKoBBDAuMTW4AQPIAQD4AQGoAgrCAgcQIxjqAhgnwgIEECMYJ8ICBxAjGIoFGCfCAgcQABgTGIAEwgIKEAAYywEYgAQYCsICCRAAGB4Y8QQYCsICBBAAGB4&sclient=gws-wiz");
-        System.out.println("Created URL: " + myURL);
-
-        // **2. Accessing URL Components**
-        System.out.println("\nURL Components:");
-        System.out.println("Protocol: " + myURL.getProtocol());
-        System.out.println("Host: " + myURL.getHost());
-        System.out.println("Port: " + myURL.getPort());
-        System.out.println("Path: " + myURL.getPath());
-        System.out.println("Query: " + myURL.getQuery());
-        System.out.println("Ref: " + myURL.getRef());
-
-        // **3. Reading Content from a URL** (For demonstration, this will be commented to prevent actual fetch)
-        /*
-        System.out.println("\nReading URL Content:");
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(myURL.openStream()))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-        }
-        */
-
-        // **4. URLConnection Class**
-        URLConnection conn = myURL.openConnection();
-        System.out.println("\nContent-Type from URLConnection: " + conn.getContentType());
-
-        // **5. Working with URL Query Parameters**
-        System.out.println("\nURL Query Parameters:");
-        URI uri = myURL.toURI();
-        String query = uri.getQuery();
-        for (String param : query.split("&")) {
-            String[] keyValue = param.split("=");
-            System.out.println("Key: " + keyValue[0] + ", Value: " + keyValue[1]);
-        }
-    }
-}
-
-```
-
-
-
-# Java Mail API Tutorial
-
-Java Mail API provides the capability to send and receive emails. In this tutorial, we'll go through the steps of setting up the environment, sending a simple email, and reading emails from an inbox.
-
-## Prerequisite:
-
-- You need to add `javax.mail.jar` to your project. This can be downloaded from the Maven repository or the official website.
-
-## Sending Email:
-
-To send an email, you need to set up a `Session`, then use the `Message` class to set up and send the message.
-
-```java
-final String username = "youremail";
-		final String password = "password";
-
-		Properties prop = new Properties();
-		prop.put("mail.smtp.host", "smtp.gmail.com");
-		prop.put("mail.smtp.port", "587");
-		prop.put("mail.smtp.auth", "true");
-		prop.put("mail.smtp.starttls.enable", "true"); // TLS
-
-		Authenticator auth = new Authenticator() {
-			// override the getPasswordAuthentication method
-			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(username, password);
-			}
-		};
-
-		Session session = Session.getInstance(prop, auth);
-		try {
-			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("youremail.com"));
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("youremail.com"));
-			message.setSubject("Testing Gmail TLS");
-			message.setText("Hello, this is a test email!");
-
-			Transport.send(message);
-
-			System.out.println("Sent successfully!");
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-```
+<p align="right">(<a href="#table-of-contents">back to top</a>) ⬆️</p>
