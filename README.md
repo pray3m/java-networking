@@ -46,7 +46,7 @@ Documentation, Examples and Resources
 </div>
 
 <br> 
-<h4> Welcome to the repository for Networking Programming <br>| with Java |<br>| BCA , CSIT , BIT | <br> <br> </h4>
+<h4> Welcome to the repository for Networking Programming <br>| with Java |<br>| BCA , CSIT , BIT | <br></h4>
 
  <a href="https://github.com/pray3m/java-networking/" title="Star this repository">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Star" />
@@ -72,6 +72,95 @@ Documentation, Examples and Resources
     - [Creating New NetworkInterface Objects](./01-InternetAddress/README.md#creating-new-networkinterface-objects)
     - [Static Factory Methods](./01-InternetAddress/README.md#static-factory-methods)
     - [Getter Methods](./01-InternetAddress/README.md#getter-methods)
+
+## [02-URLs](./02-URLs/README.md)
+  - [The Real Difference: URIs vs URLs vs URNs](./02-URLs/README.md#the-real-difference-uris-vs-urls-vs-urns)
+  - [Structure of a URL](./02-URLs/README.md#structure-of-a-url)
+  - [The URL Class](./02-URLs/README.md#the-url-class)
+    - [Creating new URL objects](./02-URLs/README.md#creating-new-url-objects)
+    - [Retrieving Data from a URL](./02-URLs/README.md#retrieving-data-from-a-url)
+      - [InputStream openStream()](./02-URLs/README.md#inputstream-openstream)
+      - [URLConnection openConnection()](./02-URLs/README.md#urlconnection-openconnection)
+      - [URL Connection openConnection(Proxy proxy)](./02-URLs/README.md#url-connection-openconnectionproxy-proxy)
+      - [Object getContent()](./02-URLs/README.md#object-getcontent)
+    - [Getter Methods](./02-URLs/README.md#getter-methods)
+  - [The URI Class](./02-URLs/README.md#the-uri-class)
+    - [Creating new URI objects](./02-URLs/README.md#creating-new-uri-objects)
+    - [Getter Methods](./02-URLs/README.md#getter-methods-1)
+    - [Resolving Relative URIs](./02-URLs/README.md#resolving-relative-uris)
+  - [The URLEncoder and URLDecoder Classes](./02-URLs/README.md#the-urLEncoder-and-urldecoder-classes)
+    - [URLEncoder](./02-URLs/README.md#urlencoder)
+    - [URLDecoder](./02-URLs/README.md#urldecoder)
+  - [Proxies](./02-URLs/README.md#proxies)
+    - [System Properties](./02-URLs/README.md#system-properties)
+    - [The Proxy Class](./02-URLs/README.md#the-proxy-class)
+    - [The ProxySelector Class](./02-URLs/README.md#the-proxyselector-class)
+  - [Communicating with server side programs through GET](./02-URLs/README.md#communicating-with-server-side-programs-through-get)
+  - [Accessing Password Protected Sites](./02-URLs/README.md#accessing-password-protected-sites)
+    - [The Authenticator Class](./02-URLs/README.md#the-authenticator-class)
+    - [The Password Authentication Class](./02-URLs/README.md#the-password-authentication-class)
+    - [JPassword Field Class](./02-URLs/README.md#jpassword-field-class)
+
+## [03-HTTP](./03-HTTP/README.md)
+  - [The HTTP Protocol](./03-HTTP/README.md#the-http-protocol)
+    - [Typical Client Request](./03-HTTP/README.md#typical-client-request)
+    - [Typical Server Response](./03-HTTP/README.md#typical-server-response)
+  - [HTTP Methods](./03-HTTP/README.md#http-methods)
+    - [GET](./03-HTTP/README.md#get)
+    - [POST](./03-HTTP/README.md#post)
+    - [PUT](./03-HTTP/README.md#put)
+    - [DELETE](./03-HTTP/README.md#delete)
+    - [HEAD](./03-HTTP/README.md#head)
+    - [PATCH](./03-HTTP/README.md#patch)
+    - [OPTIONS](./03-HTTP/README.md#options)
+    - [CONNECT](./03-HTTP/README.md#connect)
+  - [Status Codes](./03-HTTP/README.md#status-codes)
+  - [HTTP Cookies](./03-HTTP/README.md#http-cookies)
+    - [Cookie Structure](./03-HTTP/README.md#cookie-structure)
+    - [Cookie Handler](./03-HTTP/README.md#cookie-handler)
+    - [Default Cookie Manager](./03-HTTP/README.md#default-cookie-manager)
+    - [Custom Cookie Manager](./03-HTTP/README.md#custom-cookie-manager)
+    - [Cookie Store](./03-HTTP/README.md#cookie-store)
+    - [HttpCookie](./03-HTTP/README.md#httpcookie)
+  - [Program](./03-HTTP/README.md#program)
+
+<p align="right">(<a href="#table-of-contents">back to top</a>) ⬆️</p>
+
+
+## [04-URLConnections](./04-URLConnections/README.md)
+  - [URL Connections](./04-URLConnections/README.md#url-connections)
+    - [Methods of URLConnection class](./04-URLConnections/README.md#methods-of-urlconnection-class)
+    - [Reading the Header](./04-URLConnections/README.md#reading-the-header)
+      - [i. Retrieving specific header fields](./04-URLConnections/README.md#i-retrieving-specific-header-fields)
+      - [ii. Retrieving arbitrary header fields](./04-URLConnections/README.md#ii-retrieving-arbitrary-header-fields)
+    - [Caches](./04-URLConnections/README.md#caches)
+    - [HttpURLConnection](./04-URLConnections/README.md#httpurlconnection)
+    - [The URLStreamHandler Class](./04-URLConnections/README.md#the-urlstreamhandler-class)
+
+## [05-Socket](./05-Socket/README.md)
+  - [Sockets in Java: Client-Side](./05-Socket/README.md#sockets-in-java-client-side)
+    - [Socket Class](./05-Socket/README.md#socket-class)
+    - [Constructors](./05-Socket/README.md#constructors)
+      - [Basic Constructors](./05-Socket/README.md#basic-constructors)
+      - [Proxy Constructors](./05-Socket/README.md#proxy-constructors)
+      - [Constructing without Connecting](./05-Socket/README.md#constructing-without-connecting)
+    - [Getting Socket Information](./05-Socket/README.md#getting-socket-information)
+    - [Sending and Receiving Data](./05-Socket/README.md#sending-and-receiving-data)
+      - [Creating a Client Socket](./05-Socket/README.md#creating-a-client-socket)
+      - [Common Operations](./05-Socket/README.md#common-operations)
+      - [Example: Simple Client](./05-Socket/README.md#example-simple-client)
+    - [Socket Options](./05-Socket/README.md#socket-options)
+      - [TCP_NODELAY](./05-Socket/README.md#tcp_nodelay)
+      - [SO_TIMEOUT](./05-Socket/README.md#so_timeout)
+      - [SO_LINGER](./05-Socket/README.md#so_linger)
+      - [SO_KEEPALIVE](./05-Socket/README.md#so_keepalive)
+      - [SO_REUSEADDR](./05-Socket/README.md#so_reuseaddr)
+      - [SO_RCVBUF](./05-Socket/README.md#so_rcvbuf)
+      - [SO_SNDBUF](./05-Socket/README.md#so_sndbuf)
+      - [SO_OOBINLINE](./05-Socket/README.md#so_oobinline)
+      - [IP_TOS](./05-Socket/README.md#ip_tos)
+
+
 
 
 <summary>
