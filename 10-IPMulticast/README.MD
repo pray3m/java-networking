@@ -1,4 +1,4 @@
-###  Multicast Socket
+#  Multicast Socket
 A MulticastSocket is a datagram socket that is convenient for sending and receiving IP multicast datagrams. The MulticastSocket constructors create a socket with appropriate socket options enabled that make it suitable for receiving multicast datagrams.
 
 ![IP MultiCast Architecture](/public/multicastjpg.jpg)
